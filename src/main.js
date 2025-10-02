@@ -1,6 +1,5 @@
 const form = document.querySelector(".form");
 const input = document.querySelector(".form input");
-const button = document.querySelector(".form button")
 import getImagesByQuery from "./js/pixabay-api.js";
 import { showLoader } from "./js/render-functions.js";
 
