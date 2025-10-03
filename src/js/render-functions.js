@@ -3,6 +3,12 @@ import "simplelightbox/dist/simple-lightbox.min.css";
 const gallery = document.querySelector(".gallery");
 const loader = document.querySelector(".loader");
 
+let lightbox = new SimpleLightbox('.gallery-item a', {
+        captions: true,
+        captionsData: 'alt',
+        captionDelay: 250
+    });
+
 
 export function createGallery(images) {
     const code  = images.map(pic => {
@@ -31,11 +37,6 @@ export function createGallery(images) {
         </div>`
     }).join("");
     gallery.insertAdjacentHTML("afterbegin", code);
-    let lightbox = new SimpleLightbox('.gallery-item a', {
-        captions: true,
-        captionsData: 'alt',
-        captionDelay: 250
-    });
     lightbox.refresh();
 };
 
