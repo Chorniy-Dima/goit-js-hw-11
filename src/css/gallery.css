@@ -1,3 +1,7 @@
+.gallery-container {
+    padding: 0 32px;
+}
+
 .gallery {
     display: flex;
     flex-direction: row;
